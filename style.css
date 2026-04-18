@@ -514,38 +514,50 @@ body {
 }
 @media (max-width: 1024px) {
   .controls-container {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 0 15px;
-
-  
-    position: relative !important;
-    bottom: auto !important;
-    margin-top: 10px; 
-    margin-bottom: 20px;
-  }
+        position: relative !important; 
+        bottom: auto !important; 
+        top: auto !important;
+        margin: 20px auto !important; 
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: flex-start; 
+        width: 100%;
+        max-width: 90%;
+        gap: 10px;
+        z-index: 100;
+    }
   .accordion-content {
-    max-height: 0;
-    transition: max-height 0.4s ease-out;
-  }
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        display: block !important; 
+    }
 
-  .active .accordion-content {
-    max-height: 180px; 
-  }
+    .active .accordion-content {
+        max-height: 200px; 
+        padding-bottom: 10px;
+    }
+
+    
+    .minimal-contact .icon-arrow {
+        transform: rotate(0deg); 
+        transition: 0.3s;
+    }
+
+    .minimal-contact .active .icon-arrow {
+        transform: rotate(180deg); 
+    }
 
   .minimal-contact {
-    flex: 2.5;
-    position: relative !important;
-    bottom: auto !important; 
-    left: auto !important;
-    transform: none !important;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-  }
+        flex: 2.5;
+        position: relative !important;
+        bottom: auto !important;
+        transform: none !important;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        overflow: hidden; 
+    }
 
   .cv-action-btn {
     position: relative !important;
