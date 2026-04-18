@@ -33,7 +33,7 @@ const projects = [
         year:    "2026",
         type:    "Full Stack(Solution Provider)",
         status:  "Deployed",
-        github:  "https://github.com/sithija-jayasinghe/DMT",
+        github:  "https://github.com/Mhdinshaf/DMT",
         live:    "#"
     },
     {
