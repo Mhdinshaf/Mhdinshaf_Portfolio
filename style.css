@@ -285,6 +285,128 @@ ul li { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 8px; }
     transform: rotate(180deg);
 }
 
+.controls-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto 30px auto;
+    z-index: 20;
+}
+
+/* CV Button  */
+.cv-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 48px; 
+    padding: 0 25px;
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 60px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* CV Text - Neon Green Only */
+.cv-text, .cv-action-btn i {
+    color: #39ff14; /* Neon Green */
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+}
+
+.cv-action-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #39ff14; /* Hover  */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.controls-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px; 
+    width: 100%;
+    max-width: 480px; 
+    margin: 20px auto 30px auto;
+    z-index: 50;
+}
+
+/* Get in Touch  */
+.minimal-contact {
+    flex-grow: 1;
+    margin: 0 !important;
+    position: relative !important;
+    bottom: 0 !important;
+    bottom: 30px;
+    width: 320px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px; 
+    padding: 5px 20px;
+    transition: all 0.4s ease;
+}
+
+/* CV Button - Ash Design + Green Text */
+.cv-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 58px; 
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.03); /* Ash Transparent */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Ash Border */
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0; 
+}
+
+/* CV  Neon Green */
+.cv-text, .cv-action-btn i {
+    color: #ffffff; 
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.cv-action-btn:hover {
+    border-color: rgba(57, 255, 20, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.explore-link {
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.explore-link:hover {
+    border-color: #39ff14;
+    color: #39ff14;
+}
+
+
+
 /* Mobile Responsive */
 @media (max-width: 1024px) {
     .portfolio-layout {
@@ -357,4 +479,31 @@ ul li { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 8px; }
 body {
     overflow-x: hidden;
     width: 100%;
+}
+@media (max-width: 1024px) {
+    .controls-container {
+        width: 100%;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .minimal-contact {
+        flex: 2.5; /*  Get in touch  */
+    }
+
+    .cv-action-btn {
+        position: relative !important;
+        bottom: 0;
+        width: 100% !important;
+        max-width: 300px;
+        margin: 20px auto !important;
+        left: auto;
+        transform: none;
+        flex: 1;
+        padding: 0 12px;
+    }
+
+    .cv-text {
+        font-size: 0.75rem;
+    }
 }

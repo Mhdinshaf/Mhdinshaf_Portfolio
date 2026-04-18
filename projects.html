@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Featured Works | Mohomed Inshaf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="works-body">
+
+    <div class="video-bg-wrapper">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="video/inshaf2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay-dim"></div>
+    </div>
+
+    <nav class="works-nav">
+        <a href="index.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> BACK TO HOME</a>
+    </nav>
+
+    <body class="works-body">
+    <div class="video-bg-wrapper">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="img/your-new-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-btn-back">
+            <i class="fas fa-arrow-left"></i> BACK TO HOME
+        </a>
+    </nav>
+
+    <div class="slider-wrapper">
+        <h1 class="works-title">FEATURED WORKS</h1>
+
+        <div class="focus-container">
+            <button class="arrow-btn" onclick="moveSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="project-card glass" id="project-card">
+                <div class="card-header">
+                    <span class="badge">Angular 21 | Spring Boot</span>
+                </div>
+                <h2>VIBEIT.LK PLATFORM</h2>
+                <p>A premium e-commerce platform with a unique customer rewards model. Built using modern full-stack architecture focusing on performance.</p>
+                
+                <div class="card-actions">
+                    <a href="#" class="btn-main"><i class="fab fa-github"></i> GITHUB</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-external-link-alt"></i> LIVE DEMO</a>
+                </div>
+            </div>
+
+            <button class="arrow-btn" onclick="moveSlider(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</body>
+    <script src="projects-script.js"></script>
+</body>
+</html>
