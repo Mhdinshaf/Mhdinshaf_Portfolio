@@ -4,60 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Featured Works | Mohomed Inshaf</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project-style.css">
 </head>
 <body class="works-body">
 
+    <!-- VIDEO BACKGROUND -->
     <div class="video-bg-wrapper">
         <video autoplay muted loop playsinline id="bgVideo">
             <source src="video/inshaf2.mp4" type="video/mp4">
         </video>
-        <div class="video-overlay-dim"></div>
-    </div>
-
-    <nav class="works-nav">
-        <a href="index.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> BACK TO HOME</a>
-    </nav>
-
-    <body class="works-body">
-    <div class="video-bg-wrapper">
-        <video autoplay muted loop playsinline id="bgVideo">
-            <source src="img/your-new-video.mp4" type="video/mp4">
-        </video>
         <div class="video-overlay"></div>
     </div>
 
-    <nav class="top-nav">
-        <a href="index.html" class="nav-btn-back">
-            <i class="fas fa-arrow-left"></i> BACK TO HOME
-        </a>
-    </nav>
+    <!-- BACK NAV -->
+    <a href="index.html" class="nav-btn-back">
+        <i class="fas fa-long-arrow-alt-left"></i> BACK TO HOME
+    </a>
 
+    <!-- SIDE TAGS -->
+    <div class="side-tag left">BUILD_LOG: STABLE_V2</div>
+    <div class="side-tag right">LOCATION: SRI_LANKA</div>
+
+    <!-- MAIN SLIDER -->
     <div class="slider-wrapper">
-        <h1 class="works-title">FEATURED WORKS</h1>
+        <h1 class="works-header">FEATURED <span class="neon-text">WORKS</span></h1>
 
         <div class="focus-container">
-            <button class="arrow-btn" onclick="moveSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow-btn" onclick="moveSlider(-1)" aria-label="Previous project">
+                <i class="fas fa-chevron-left"></i>
+            </button>
 
-            <div class="project-card glass" id="project-card">
-                <div class="card-header">
-                    <span class="badge">Angular 21 | Spring Boot</span>
+            <!-- PROJECT CARD -->
+            <div class="project-card glass-morph" id="project-display">
+
+                <div class="card-top-row">
+                    <span class="tech-badge" id="p-tech">ANGULAR · SPRING BOOT</span>
                 </div>
-                <h2>VIBEIT.LK PLATFORM</h2>
-                <p>A premium e-commerce platform with a unique customer rewards model. Built using modern full-stack architecture focusing on performance.</p>
-                
-                <div class="card-actions">
-                    <a href="#" class="btn-main"><i class="fab fa-github"></i> GITHUB</a>
-                    <a href="#" class="btn-outline"><i class="fas fa-external-link-alt"></i> LIVE DEMO</a>
+
+                <div class="proj-number" id="p-number">PROJECT 01 / 04</div>
+
+                <h2 class="project-title" id="p-title">
+                    VIBEIT<span class="neon-dot">.</span>LK PLATFORM
+                </h2>
+
+                <div class="neon-divider"></div>
+
+                <div class="tag-row" id="p-tags">
+                    <span class="tag">E-COMMERCE</span>
+                    <span class="tag">FULL-STACK</span>
+                    <span class="tag">3D UI</span>
+                </div>
+
+                <p class="project-desc" id="p-desc">
+                    A premium e-commerce platform for tech gadgets. Focuses on full-stack excellence and high-performance user interfaces.
+                </p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-val" id="p-year">2026</span>
+                        <span class="stat-lbl">YEAR</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-val" id="p-type">Full Stack</span>
+                        <span class="stat-lbl">TYPE</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-val" id="p-status">Live</span>
+                        <span class="stat-lbl">STATUS</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" id="p-github" class="btn-neon-solid" target="_blank">
+                        <i class="fab fa-github"></i> GITHUB
+                    </a>
+                    <a href="#" id="p-live" class="btn-neon-outline" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> LIVE DEMO
+                    </a>
                 </div>
             </div>
 
-            <button class="arrow-btn" onclick="moveSlider(1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="arrow-btn" onclick="moveSlider(1)" aria-label="Next project">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
+
+        <div class="dots-nav" id="dots-container"></div>
     </div>
-</body>
-    <script src="projects-script.js"></script>
+
+    <!-- BOTTOM HUD BAR -->
+    <div class="bottom-hud-bar">
+        <div class="hud-item"><span class="pulse-dot"></span> SYSTEM_ACTIVE</div>
+        <div class="hud-item" id="live-clock">00:00:00</div>
+        <div class="hud-item">MOHOMED_INSHAF © 2026</div>
+    </div>
+
+    <script src="project-script.js"></script>
 </body>
 </html>
