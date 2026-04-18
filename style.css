@@ -513,54 +513,38 @@ body {
   width: 100%;
 }
 @media (max-width: 1024px) {
-  .controls-container {
-        position: relative !important;
-        bottom: auto !important;
-        margin: 15px auto 25px auto !important;
+ .controls-container {
+        position: relative !important; 
+        bottom: auto !important; 
+        top: auto !important;
+        margin: 20px auto 35px auto !important; 
         display: flex !important;
         flex-direction: row !important; 
         align-items: flex-start !important; 
         width: 100% !important;
         max-width: 95% !important; 
         gap: 12px !important;
+        z-index: 100;
         padding: 0 10px;
     }
   .accordion-content {
         max-height: 0;
-        transition: max-height 0.5s ease-out;
-        display: block !important; 
     }
 
     .active .accordion-content {
-        max-height: 200px; 
+        max-height: 250px !important; 
         padding-bottom: 10px;
     }
 
-    
-    .minimal-contact .icon-arrow {
-        transform: rotate(0deg); 
-        transition: 0.3s;
-    }
-
-    .minimal-contact .active .icon-arrow {
-        transform: rotate(180deg); 
-    }
-    .contact-trigger {
-        padding: 12px 15px !important;
-        font-size: 0.7rem !important;
-    }
-
-    .contact-grid {
-        padding: 10px 15px !important;
-    }
-
   .minimal-contact {
-        flex: 3 !important; 
-        min-width: 200px !important;
+        flex: 3 !important;
         position: relative !important;
+        bottom: auto !important;
+        transform: none !important;
         background: rgba(255, 255, 255, 0.04) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        border-radius: 25px !important; 
+        border-radius: 25px !important;
+        overflow: hidden;
     }
     .active .accordion-content {
         max-height: 250px !important; 
@@ -574,7 +558,7 @@ body {
     position: relative !important;
     bottom: 0;
     width: 100% !important;
-    max-width: 300px;
+    max-width: 350px;
     margin: 20px auto !important;
     left: auto;
     transform: none;
@@ -585,4 +569,10 @@ body {
   .cv-text {
     font-size: 0.75rem;
   }
+  .center-column {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        min-height: auto !important;
+    }
 }
