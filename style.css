@@ -285,22 +285,76 @@ ul li { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 8px; }
     transform: rotate(180deg);
 }
 
-
 /* Mobile Responsive */
 @media (max-width: 1024px) {
     .portfolio-layout {
-        grid-template-columns: 1fr; /* Stacks everything to 1 column on mobile */
+        grid-template-columns: 1fr; 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 15px; 
     }
+
+    
     .center-column {
-        order: -1; /* Brings name and face to the top on mobile */
+        order: -1; 
+        width: 100%;
         min-height: 60vh;
-    } 
-
-
-}
-@media (max-width: 1024px) {
-    .contact-accordion {
-        width: 90%; 
-        margin: 0 auto 20px auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
+
+   
+    .main-title {
+        font-size: 4rem !important;
+        line-height: 1;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .sub-title {
+        position: static !important;
+        font-size: 0.85rem;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    
+    .hero-subject {
+        position: static !important;
+        width: 100% !important;
+        max-width: 320px !important; 
+        height: auto;
+        margin: 0 auto !important;
+    }
+
+   
+    .glass-card {
+        width: 100% !important; 
+        max-width: 100%;
+        margin: 0 !important;
+        padding: 20px;
+        box-sizing: border-box; 
+    }
+
+
+    .minimal-contact {
+        position: relative !important;
+        bottom: 0;
+        width: 100% !important;
+        max-width: 300px;
+        margin: 20px auto !important;
+        left: auto;
+        transform: none;
+    }
+
+    .column {
+        width: 100% !important;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
