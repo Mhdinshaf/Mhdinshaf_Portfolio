@@ -514,18 +514,16 @@ body {
 }
 @media (max-width: 1024px) {
   .controls-container {
-        position: relative !important; 
-        bottom: auto !important; 
-        top: auto !important;
-        margin: 20px auto !important; 
-        display: flex;
-        flex-direction: row; 
-        justify-content: center;
-        align-items: flex-start; 
-        width: 100%;
-        max-width: 90%;
-        gap: 10px;
-        z-index: 100;
+        position: relative !important;
+        bottom: auto !important;
+        margin: 15px auto 25px auto !important;
+        display: flex !important;
+        flex-direction: row !important; 
+        align-items: flex-start !important; 
+        width: 100% !important;
+        max-width: 95% !important; 
+        gap: 12px !important;
+        padding: 0 10px;
     }
   .accordion-content {
         max-height: 0;
@@ -547,16 +545,29 @@ body {
     .minimal-contact .active .icon-arrow {
         transform: rotate(180deg); 
     }
+    .contact-trigger {
+        padding: 12px 15px !important;
+        font-size: 0.7rem !important;
+    }
+
+    .contact-grid {
+        padding: 10px 15px !important;
+    }
 
   .minimal-contact {
-        flex: 2.5;
+        flex: 3 !important; 
+        min-width: 200px !important;
         position: relative !important;
-        bottom: auto !important;
-        transform: none !important;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 50px;
-        overflow: hidden; 
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 25px !important; 
+    }
+    .active .accordion-content {
+        max-height: 250px !important; 
+    }
+    .contact-item span {
+        font-size: 0.75rem !important;
+        word-break: break-all; 
     }
 
   .cv-action-btn {
